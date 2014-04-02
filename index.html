@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.lightOn,.typing{
+			display: none;
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			/*$('.lightOff').click(function(){
+				$('.lightOff').hide();
+				$('.lightOn').show();
+				$('body').css('background-color','black');
+			});
+			$('.lightOn').click(function(){
+				$('.lightOn').hide();
+				$('.lightOff').show();
+				$('body').css('background-color','white');
+			});	*/
+			$('select').change(function(){
+				$('body').css('background-color',this.value);
+			});
+			$('input').focus(function(){
+				$('span').removeClass('typing')
+			});
+			$('input').blur(function(){
+				$('span').addClass('typing')
+			})
+		});
+		
+	</script>
+</head>
+<body>
+	<!--<button class="lightOn">Turn On</button>
+	<button class="lightOff">Turn Off</button>-->
+	<!--<form action="">
+		<select name="" id="">
+			<option value="white">Choose</option>
+			<option value="red">White</option>
+			<option value="blue">Red</option>
+		</select>
+		<button>Clear</button>
+		<br />
+		<input type="text" placeholder="Click to focus" /><span class="typing">Escribiedno...</span>		
+	</form>-->
+	<div class="box">
+		<h2>Hover to Change</h2>
+	</div>
+</body>
+</html>
